@@ -32,8 +32,7 @@ $autoload['helper']= 'database, session'.
 4.	Membuat folder tamplate di view, lalu copy bagian footer, header dan topbar yang adadi index.html pada file baru di dalam folder tamplate, berinama file untuk footer dengan footer,php, file untuk header dengan header.php dan top bar dengan nama topbar.php.
 Buat file admin.php dalam controller/admin, tambahkan code 
 
-
-``<?php 
+```<?php 
 
 class Admin extends CI_Controller{
  // fuctioon construct pada controller digunakan untuk mengaktifkan model dan helper
@@ -59,7 +58,8 @@ class Admin extends CI_Controller{
  }	
 
 }
-``
+
+```
 
 
 5.	Buat route baru untuk admin, buka config/routes.php 
@@ -67,10 +67,9 @@ class Admin extends CI_Controller{
 6.	Ubah semua link css, js yang mengarah /vendor/ jadi /assets/
 7.	Untuk mengahpus index.php agar url lebih simple, buka config/config.php, hapus index.php  pada $config['index_page']. Selanjutnya      membuat htaccess di directory root codeigniter, dengan buat file baru dengan nama “ .htaccess “. Isi file tersebut:
 
-
-  ``RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-
+ ```
+  RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !-f
    RewriteCond %{REQUEST_FILENAME} !-d
 
-    RewriteRule ^(.*)$ index.php/$1 [L]``
+    RewriteRule ^(.*)$ index.php/$1 [L]```
