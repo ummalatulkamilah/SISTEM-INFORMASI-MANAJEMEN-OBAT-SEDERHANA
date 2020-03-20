@@ -25,7 +25,7 @@ $autoload['helper']= 'database, session'.
 	define('SITE_NAME', 'sibat');
 
 
-#Langkah 3 : Menambahkan SB admin di code igniter.
+## Langkah 3 : Menambahkan SB admin di code igniter.
 1.	Ekstrak SB admin
 2.	Copy Folder js, css dan vendor ke folder codeigniter, untuk folder vendor dirubah jadi asset agar tidak bercampur dengan folder vendor dari composer.
 3.	Membuat folder admin di view, lalu copy bagian content index.html pada file baru di dalam folder admin, berinama file admin.php.
@@ -72,4 +72,32 @@ class Admin extends CI_Controller{
    RewriteCond %{REQUEST_FILENAME} !-f
    RewriteCond %{REQUEST_FILENAME} !-d
 
-    RewriteRule ^(.*)$ index.php/$1 [L]```
+    RewriteRule ^(.*)$ index.php/$1 [L]
+  ```
+  8.	Buka  http://localhost/sibat/admin/, maka tamplate SB admin akan muncul.
+  
+  
+  
+ ##  Langkah 3 : Membuat database 
+1.	Buat database sibat dengan dua tabel, tabel obat dan tabel admin.
+2.	Menghubungkan database dengan codeigniter, dengan cara membuka aplication/config/database, atur nama hostname jadi localhost, 		username jadi root, password dikosongkan, dan database diisi sibat. 
+
+
+## Langkah 4: Membuat CRUD untuk data tabel obat
+1.	Buat folder admin pada controller, lalu buat file crud.php dan isi dengan code, sesuaikan dengan code yang ada di folder sibat. 
+2.	Buat folder admin pada view, lalu buat file v_tampil yang nantikan akan digunakan sebagai form tampil, sesuaikan dengan code 		yang ada di folder sibat. 
+3.	Buat file v_tambah data yang nantinya akan digunakan sebagai form tambah data, , sesuaikan dengan code yang ada di folder sibat. 
+4.	Buat file v_edit pada folder admin yang terdapat pada view, v_edit berfungsi sebagai form edit, sesuaikan dengan code yang ada 		di folder sibat. 
+
+
+
+## Langkah 6: Membuat Login dan Logout
+1.	Buat controller bernama login.php, isi sesuai dengan code yang ada di folder sibat.
+2.	Buat model dengan nama file m_login.php, isi sesuai dengan code yang ada di folder sibat
+3.	Buat v_login.php pada folder view untuk digunakan sebagai form login.
+4.	Untuk logout function logout yang ada pada folder login.php di panggil ke topbar bagian icon user.
+
+
+
+
+
